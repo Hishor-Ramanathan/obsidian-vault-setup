@@ -1,0 +1,62 @@
+formulas:
+  added: file.ctime.format("DD.MM.YYYY")
+  updated: file.mtime.format("DD.MM.YYYY")
+views:
+  - type: cards
+    name: Books
+    filters:
+      and:
+        - note.note_type == "Book Summary"
+        - '!file.path.contains("Templates/")'
+    order:
+      - file.name
+      - author
+      - year
+      - rating
+    image: note.cover
+    imageFit: contain
+  - type: table
+    name: Table
+    filters:
+      and:
+        - note.note_type == "Book Summary"
+        - '!file.path.contains("Templates/")'
+    order:
+      - file.name
+      - author
+      - year
+      - pages
+      - rating
+      - formula.added
+      - formula.updated
+  - type: table
+    name: Podcasts
+    filters:
+      and:
+        - note.note_type == "Podcast Summary"
+        - '!file.inFolder("System")'
+    order:
+      - file.name
+      - formula.added
+      - formula.updated
+  - type: table
+    name: Poems
+    filters:
+      and:
+        - note.note_type == "Poem"
+        - '!file.inFolder("System")'
+    order:
+      - file.name
+      - formula.added
+      - formula.updated
+  - type: table
+    name: Studies
+    filters:
+      and:
+        - note.note_type == "Studies"
+        - '!file.inFolder("System")'
+    order:
+      - file.name
+      - formula.added
+      - formula.updated
+newItemFolder: 2 Knowledge Base/3 Summaries/Books

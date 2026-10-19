@@ -1,0 +1,8 @@
+/* AnuPpuccin: default (uncoloured) canvas arrows render invisible.
+   Paint them with the normal text colour; coloured edges (.is-themed) keep their colour. */
+.canvas-edges g:not(.is-themed) .canvas-display-path {
+  stroke: var(--text-muted);
+}
+.canvas-edges g:not(.is-themed) .canvas-path-end {
+  fill: var(--text-muted);
+}

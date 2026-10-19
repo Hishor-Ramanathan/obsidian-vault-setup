@@ -1,0 +1,12 @@
+formulas:
+  updated: file.mtime.format("DD.MM.YYYY")
+views:
+  - type: cards
+    name: Drawings
+    filters:
+      and:
+        - note.note_type == "Drawing"
+    order:
+      - file.name
+      - formula.updated
+      - tags

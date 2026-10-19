@@ -1,0 +1,175 @@
+filters:
+  and:
+    - '!file.inFolder("System")'
+    - '!file.inFolder("Journal")'
+    - '!file.inFolder("Projects/Archive")'
+    - "!note.note_type.isEmpty()"
+    - note.note_type != "Hub"
+    - note.note_type != "System"
+formulas:
+  created: created.format("DD.MM.YYYY")
+views:
+  - type: table
+    name: All by topic
+    order:
+      - file.name
+      - note_type
+      - tags
+      - status
+      - formula.created
+    sort:
+      - property: tags
+        direction: ASC
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Books
+    filters:
+      and:
+        - note.note_type == "Book Summary"
+    order:
+      - file.name
+      - author
+      - note_type
+      - tags
+      - status
+      - formula.created
+  - type: table
+    name: Videos
+    filters:
+      and:
+        - note.note_type == "Youtube Summary"
+    order:
+      - file.name
+      - note_type
+      - tags
+      - status
+      - formula.created
+  - type: table
+    name: Podcasts
+    filters:
+      and:
+        - note.note_type == "Podcast Summary"
+    order:
+      - file.name
+      - note_type
+      - tags
+      - status
+      - formula.created
+  - type: table
+    name: Films
+    filters:
+      and:
+        - note.note_type == "Movie Summary"
+    order:
+      - file.name
+      - note_type
+      - tags
+      - status
+      - formula.created
+  - type: table
+    name: Series
+    filters:
+      and:
+        - note.note_type == "Series Summary"
+    order:
+      - file.name
+      - note_type
+      - tags
+      - status
+      - formula.created
+  - type: table
+    name: Studies
+    filters:
+      and:
+        - note.note_type == "Studies"
+    order:
+      - file.name
+      - note_type
+      - tags
+      - status
+      - formula.created
+  - type: table
+    name: Fleeting
+    filters:
+      and:
+        - note.note_type == "Fleeting Note"
+    order:
+      - file.name
+      - note_type
+      - tags
+      - status
+      - formula.created
+  - type: table
+    name: Permanent
+    filters:
+      and:
+        - note.note_type == "Permanent Note"
+    order:
+      - file.name
+      - note_type
+      - tags
+      - status
+      - formula.created
+  - type: table
+    name: Quotes
+    filters:
+      and:
+        - note.note_type == "Quote"
+    order:
+      - file.name
+      - note_type
+      - tags
+      - status
+      - formula.created
+  - type: table
+    name: Lexicon
+    filters:
+      and:
+        - note.note_type == "Lexicon"
+    order:
+      - file.name
+      - note_type
+      - tags
+      - status
+      - formula.created
+  - type: table
+    name: Drawings
+    filters:
+      and:
+        - note.note_type == "Drawing"
+    order:
+      - file.name
+      - note_type
+      - tags
+      - status
+      - formula.created
+  - type: table
+    name: Queue
+    filters:
+      and:
+        - note.source == "claude"
+        - note.note_type != "Source"
+        - note.note_type != "Transcript"
+    order:
+      - file.name
+      - note_type
+      - subject
+      - formula.created
+    sort:
+      - property: subject
+        direction: ASC
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Unlinked
+    filters:
+      and:
+        - note.related.isEmpty()
+        - file.backlinks.length == 0
+    order:
+      - file.name
+      - note_type
+      - tags
+      - status
+      - formula.created

@@ -1,0 +1,15 @@
+{
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "hide-embedded-title",
+    "canvas-edge-fix",
+    "custom-rainbow-colors",
+    "system-folder-gray",
+    "hide-claude",
+    "royal-blue-accent",
+    "tree-line-colors"
+  ],
+  "baseFontSize": 16,
+  "cssTheme": "AnuPpuccin",
+  "accentColor": "#4169e1"
+}

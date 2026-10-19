@@ -1,0 +1,31 @@
+{
+  "data_version": 2,
+  "command_timeout": 5,
+  "templates_folder": "System/Templates",
+  "templates_pairs": [],
+  "trigger_on_file_creation_mode": "folder",
+  "auto_jump_to_cursor": true,
+  "jump_to_cursor_after_file_name": false,
+  "user_scripts_folder": "",
+  "folder_templates": [
+    {
+      "folder": "Journal",
+      "template": "System/Templates/Journal.md"
+    },
+    {
+      "folder": "Notes",
+      "template": "System/Templates/New Note.md"
+    },
+    {
+      "folder": "Inbox",
+      "template": "System/Templates/Template Fleeting Note.md"
+    }
+  ],
+  "file_templates": [],
+  "syntax_highlighting": false,
+  "syntax_highlighting_mobile": false,
+  "startup_templates": [],
+  "intellisense_render": "4",
+  "ignore_folders_on_creation": [],
+  "enable_folder_templates": true
+}

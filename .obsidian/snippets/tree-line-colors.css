@@ -1,0 +1,9 @@
+/* tree indent lines match each top-level folder's icon color (see obsidian-icon-folder data.json) */
+.nav-folder:has(> .nav-folder-title[data-path="Essentials"]) .nav-folder-children { border-left-color: #e5c07b !important; }
+.nav-folder:has(> .nav-folder-title[data-path="Notes"]) .nav-folder-children { border-left-color: #4169e1 !important; }
+.nav-folder:has(> .nav-folder-title[data-path="Projects"]) .nav-folder-children { border-left-color: #98c379 !important; }
+.nav-folder:has(> .nav-folder-title[data-path="Journal"]) .nav-folder-children { border-left-color: #e06c75 !important; }
+.nav-folder:has(> .nav-folder-title[data-path="Inbox"]) .nav-folder-children { border-left-color: #d19a66 !important; }
+.nav-folder:has(> .nav-folder-title[data-path="System"]) .nav-folder-children { border-left-color: #7f848e !important; }
+.nav-folder:has(> .nav-folder-title[data-path="Excalidraw"]) .nav-folder-children { border-left-color: #c678dd !important; }
+.nav-folder:has(> .nav-folder-title[data-path="Sources"]) .nav-folder-children { border-left-color: #56b6c2 !important; }

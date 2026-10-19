@@ -1,0 +1,8 @@
+# Never publish plugin data: full-calendar-remastered/data.json holds the Google
+# OAuth client secret and refresh token.
+.obsidian/plugins/*/data.json
+.obsidian/workspace*.json
+
+# Course material and attachments: re-downloadable, and they never delta-compress.
+Course Materials/
+Pictures/

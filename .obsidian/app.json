@@ -1,0 +1,21 @@
+{
+  "userIgnoreFilters": [
+    "System/Templates/",
+    "CLAUDE.md"
+  ],
+  "alwaysUpdateLinks": true,
+  "spellcheck": false,
+  "promptDelete": false,
+  "spellcheckDictionary": [
+    "Ilakkiya",
+    "OCD",
+    "Lat",
+    "Pulldown",
+    "Chancen",
+    "Supplier",
+    "Supplier",
+    "Practice",
+    "Practice"
+  ],
+  "attachmentFolderPath": "System/Attachments"
+}

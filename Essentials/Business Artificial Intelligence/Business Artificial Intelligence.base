@@ -1,0 +1,16 @@
+formulas:
+  added: file.ctime.format("DD.MM.YYYY")
+  updated: file.mtime.format("DD.MM.YYYY")
+views:
+  - type: table
+    name: Notes
+    filters:
+      and:
+        - note.project == "Business Artificial Intelligence"
+        - '!file.inFolder("System")'
+    order:
+      - file.name
+      - note_type
+      - formula.added
+      - formula.updated
+newItemFolder: Notes

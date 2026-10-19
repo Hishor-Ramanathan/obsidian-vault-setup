@@ -1,0 +1,16 @@
+views:
+  - type: cards
+    name: English
+    filters:
+      and:
+        - note.language == "English"
+        - note.note_type == "Lexicon"
+  - type: cards
+    name: Deutsch
+    filters:
+      and:
+        - note.language == "Deutsch"
+        - note.note_type == "Lexicon"
+    order:
+      - file.name
+      - created

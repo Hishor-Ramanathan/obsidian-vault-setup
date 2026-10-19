@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "deny": [
+      "Edit(Notes/**)",
+      "Write(Notes/**)",
+      "Edit(Projects/**)",
+      "Write(Projects/**)",
+      "Edit(Journal/**)",
+      "Write(Journal/**)"
+    ]
+  }
+}

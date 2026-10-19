@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "type": "file",
+      "ctime": 1785594233721,
+      "path": "Home.md",
+      "title": "Home"
+    },
+    {
+      "type": "file",
+      "ctime": 1785594233722,
+      "path": "2 Knowledge Base/3 Summaries/Books/Books.md",
+      "title": "Books"
+    },
+    {
+      "type": "file",
+      "ctime": 1761836888702,
+      "path": "1 The Core/1 The Core.canvas",
+      "title": "The Core (broken path)"
+    },
+    {
+      "type": "file",
+      "ctime": 1760866062073,
+      "path": "2 Knowledge Base/5 The Garden/5 The Garden.base",
+      "title": "The Garden (broken path)"
+    },
+    {
+      "type": "file",
+      "ctime": 1761307707762,
+      "path": "2 Knowledge Base/2 FleetingNotes/Summaries Aboard Semester.md",
+      "title": "Fleeting note (broken path)"
+    },
+    {
+      "type": "file",
+      "ctime": 1786392511264,
+      "path": "Journal/Journal.base",
+      "title": "Journal"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "firstDay": 1,
+  "initialView": {
+    "desktop": "timeGridWeek",
+    "mobile": "timeGrid3Days"
+  },
+  "timeFormat24h": true,
+  "clickToCreateEventFromMonthView": true,
+  "enableAdvancedCategorization": false,
+  "businessHours": {
+    "enabled": false,
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "09:00",
+    "endTime": "17:00"
+  },
+  "enableBackgroundEvents": true,
+  "enableReminders": true,
+  "enableDefaultReminder": true,
+  "defaultReminderMinutes": 10,
+  "enableLivePreview": true,
+  "slotMinTime": "00:00",
+  "slotMaxTime": "24:00",
+  "allDaySlot": true,
+  "timeGridDayHeaderFormat": "ddmmyyyy-day",
+  "weekends": true,
+  "hiddenDays": [],
+  "dayMaxEvents": false
+}

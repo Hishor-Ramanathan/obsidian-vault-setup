@@ -1,0 +1,18 @@
+formulas:
+  added: file.ctime.format("DD.MM.YYYY")
+  updated: file.mtime.format("DD.MM.YYYY")
+views:
+  - type: table
+    name: Notes
+    filters:
+      and:
+        - note.note_type == "Body"
+        - '!file.inFolder("System")'
+        - '!file.inFolder("Projects/Archive")'
+    order:
+      - file.name
+      - formula.added
+      - formula.updated
+    sort:
+      - property: file.name
+        direction: ASC

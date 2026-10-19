@@ -1,0 +1,4 @@
+/* top-level folder 8 (System) in gray; top-level order: Essentials, Excalidraw, Inbox, Journal, Notes, Projects, Sources, System */
+.nav-files-container > div > .nav-folder:nth-child(9) {
+  --rainbow-folder-color: var(--ctp-overlay1) !important;
+}

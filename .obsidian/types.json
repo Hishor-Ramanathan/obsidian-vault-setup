@@ -1,0 +1,26 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "created": "datetime",
+    "note_type": "text",
+    "status": "text",
+    "org": "text",
+    "source": "text",
+    "period": "text",
+    "category": "multitext",
+    "author": "multitext",
+    "speaker": "multitext",
+    "url": "multitext",
+    "cover": "text",
+    "podcast": "text",
+    "director": "text",
+    "youtube_channel": "text",
+    "year": "number",
+    "pages": "number",
+    "minutes": "number",
+    "rating": "number",
+    "modified": "text"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "settings": {
+    "migrated": 6,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "LiBook"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterEnabled": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":",
+    "lucideIconPackType": "native",
+    "debugMode": false,
+    "useInternalPlugins": false
+  },
+  "Essentials": {
+    "iconName": "LiStar",
+    "iconColor": "#e5c07b"
+  },
+  "Notes": {
+    "iconName": "LiNotebookPen",
+    "iconColor": "#4169e1"
+  },
+  "Projects": {
+    "iconName": "LiFolderKanban",
+    "iconColor": "#98c379"
+  },
+  "Journal": {
+    "iconName": "LiBookHeart",
+    "iconColor": "#e06c75"
+  },
+  "Inbox": {
+    "iconName": "LiInbox",
+    "iconColor": "#d19a66"
+  },
+  "System": {
+    "iconName": "LiSettings",
+    "iconColor": "#7f848e"
+  },
+  "Excalidraw": {
+    "iconName": "LiPenTool",
+    "iconColor": "#c678dd"
+  },
+  "Sources": {
+    "iconName": "LiFileText",
+    "iconColor": "#56b6c2"
+  },
+  "Essentials/Body": {
+    "iconName": "LiDumbbell",
+    "iconColor": "#e5c07b"
+  },
+  "Essentials/Habits": {
+    "iconName": "LiRepeat",
+    "iconColor": "#e5c07b"
+  },
+  "Essentials/Quotes.md": {
+    "iconName": "LiQuote",
+    "iconColor": "#e5c07b"
+  },
+  "Essentials/Lexicon.base": {
+    "iconName": "LiLanguages",
+    "iconColor": "#e5c07b"
+  },
+  "Essentials/Library.base": {
+    "iconName": "LiLibrary",
+    "iconColor": "#e5c07b"
+  },
+  "Essentials/Business Artificial Intelligence": {
+    "iconName": "LiBook",
+    "iconColor": "#e5c07b"
+  }
+}

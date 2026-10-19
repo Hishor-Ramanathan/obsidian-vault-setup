@@ -1,0 +1,6 @@
+/* hide Claude files in the file explorer */
+.nav-file:has(> .nav-file-title[data-path="CLAUDE.md"]),
+.nav-folder:has(> .nav-folder-title[data-path=".claude"]),
+.nav-folder:has(> .nav-folder-title[data-path=".claudian"]) {
+  display: none;
+}

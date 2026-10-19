@@ -1,0 +1,29 @@
+{
+  "settings": {
+    "batchSize": 20,
+    "infiniteScroll": true,
+    "headerScrollsWithFeed": false,
+    "includeMediaOnlyNotes": true,
+    "showNonMarkdownFiles": true,
+    "simplifiedView": true,
+    "reduceAnimations": false,
+    "previewSize": "large",
+    "openNoteBehavior": "tab",
+    "excludeFolders": [
+      "Journal",
+      "System",
+      "Sources",
+      "Projects"
+    ],
+    "excludeTags": [],
+    "excludeGlobs": [],
+    "searchQuery": "",
+    "frontmatterImageProps": [
+      "cover",
+      "image",
+      "banner"
+    ],
+    "frontmatterBeforeProps": [],
+    "frontmatterAfterProps": []
+  }
+}

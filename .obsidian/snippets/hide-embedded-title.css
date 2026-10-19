@@ -1,0 +1,4 @@
+.markdown-embed .markdown-embed-title:has(+ .markdown-embed-content .quote-note),
+.markdown-embed-title:has(+ .markdown-embed-content .quote-note) {
+  display: none !important;
+}
