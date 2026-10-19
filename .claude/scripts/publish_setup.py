@@ -25,6 +25,10 @@ ALLOW = [
     ".claude/settings.json",
     ".claude/skills/**/*.md",
     ".claude/scripts/*.py",
+    ".claude/scripts/*.cmd",
+    # Source of the vault's own plugins (not in Obsidian's registry);
+    # install_plugins.py copies them into .obsidian/plugins/.
+    ".claude/plugins/*/*",
     ".claude/docs/agents/*.md",
     "System/Templates/*.md",
     "System/Plugins.md",
@@ -61,6 +65,7 @@ ALLOW = [
 # Both fail closed: seed_is_clean() refuses any secret-looking key with a value.
 SEED_PLUGINS = {
     "obsidian-icon-folder": {},
+    "pomodoro-timer": {},
     "dataview": {},
     "obsidian-kanban": {},
     "folder-notes": {},
@@ -131,7 +136,7 @@ EXCLUDE = ["Projects/Archive/"]
 # so this script can name the mechanism without naming the words. Values are the
 # replacements written into published copies; a final scan fails if any word survives.
 PRIVATE_WORDS_FILE = VAULT / ".claude/private-words.json"
-TEXT_SUFFIXES = {".md", ".py", ".json", ".base", ".css", ".txt", ".canvas", ".yml", ".yaml"}
+TEXT_SUFFIXES = {".md", ".py", ".cmd", ".js", ".json", ".base", ".css", ".txt", ".canvas", ".yml", ".yaml"}
 
 
 def load_private_words():

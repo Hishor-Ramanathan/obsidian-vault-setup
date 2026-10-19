@@ -47,6 +47,12 @@ plugin code, or secrets, so this skill supplies those steps.
    - Secrets: Full Calendar's Google sign-in, any API keys for Claudian. They live in
      each plugin's `data.json` and are never committed.
    - Obsidian Sync, if wanted.
+   - Terminal tabs that resume Claude: Settings -> Terminal -> Profiles -> the Windows
+     integrated (cmd) profile: arguments `/k <vault>\.claude\scripts\claude-tab.cmd`.
+     Profiles are machine-specific, so they are not seeded. With it, a tab stays plain
+     cmd; `claude` started there comes back in the same folder and session when the tab
+     reopens, unless it was ended with `/exit`. Needs the Claude Tab Sessions plugin
+     (installed in step 2 from `.claude/plugins/`).
 
 5. **Verify.**
 

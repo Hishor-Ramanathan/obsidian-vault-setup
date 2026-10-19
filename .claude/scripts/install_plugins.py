@@ -5,7 +5,8 @@
 
 Reads `.obsidian/community-plugins.json`, resolves each id to its GitHub repo via
 Obsidian's official registry, downloads the latest release's main.js / manifest.json /
-styles.css into `.obsidian/plugins/<id>/`. Skips plugins already installed.
+styles.css into `.obsidian/plugins/<id>/`. The vault's own plugins come from
+`.claude/plugins/<id>/` instead. Skips plugins already installed.
 
 Seeds only structural/look-and-feel settings (template folders, folder icons), and only where the plugin has
 no data.json yet. Secrets (Google OAuth, API keys) are never written: enter them in the
@@ -13,6 +14,7 @@ app.
 """
 
 import json
+import shutil
 import sys
 import urllib.error
 import urllib.request
@@ -52,6 +54,10 @@ def main():
         target = vault / ".obsidian/plugins" / plugin_id
         if (target / "main.js").exists():
             print("have     ", plugin_id)
+        elif (vault / ".claude/plugins" / plugin_id).is_dir():
+            # the vault's own plugin, published as source: not in the registry
+            shutil.copytree(vault / ".claude/plugins" / plugin_id, target, dirs_exist_ok=True)
+            print("copied   ", plugin_id, "<- .claude/plugins")
         elif plugin_id not in registry:
             print("NOT IN REGISTRY", plugin_id, "- install by hand")
         else:

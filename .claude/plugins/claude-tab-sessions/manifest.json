@@ -1,0 +1,9 @@
+{
+  "id": "claude-tab-sessions",
+  "name": "Claude Tab Sessions",
+  "version": "0.1.0",
+  "minAppVersion": "1.0.0",
+  "description": "Gives each Terminal tab running the claude-tab profile its own Claude Code session id, saved with the tab, so a restart resumes the exact session.",
+  "author": "vault",
+  "isDesktopOnly": true
+}
