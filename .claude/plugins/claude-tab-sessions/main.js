@@ -16,6 +16,28 @@ module.exports = class ClaudeTabSessions extends Plugin {
     const app = this.app;
     const orig = WorkspaceLeaf.prototype.setViewState;
     this.orig = orig;
+
+    // Report a stable state for Claude tabs. The Terminal plugin's state carries the
+    // terminal size and scrollback (serial) and focus, which change on every resize or
+    // Tab Groups move. Pinned Tabs identifies a pinned tab by its whole state, so each
+    // change looked like "pinned tab missing": it unpinned the live tab (a note then
+    // opened over it) and opened a restore copy (closed again below = cmd churn).
+    // Dropping serial also skips the scrollback replay; claude --resume redraws anyway.
+    const origGet = WorkspaceLeaf.prototype.getViewState;
+    this.origGet = origGet;
+    WorkspaceLeaf.prototype.getViewState = function (...a) {
+      const vs = origGet.apply(this, a);
+      try {
+        const st = vs && vs.type === "terminal:terminal" && vs.state && vs.state["terminal:terminal"];
+        const args = st && st.profile && st.profile.args;
+        if (Array.isArray(args) && args.some((x) => String(x).includes(MARK))) {
+          return { ...vs, state: { ...vs.state, "terminal:terminal": { ...st, focus: false, serial: null } } };
+        }
+      } catch (e) {
+        console.error("claude-tab-sessions", e);
+      }
+      return vs;
+    };
     WorkspaceLeaf.prototype.setViewState = function (vs, ...rest) {
       try {
         if (vs && vs.type === "terminal:terminal") {
@@ -69,5 +91,6 @@ module.exports = class ClaudeTabSessions extends Plugin {
   }
   onunload() {
     if (this.orig) WorkspaceLeaf.prototype.setViewState = this.orig;
+    if (this.origGet) WorkspaceLeaf.prototype.getViewState = this.origGet;
   }
 };

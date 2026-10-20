@@ -36,26 +36,13 @@ time_focused:
 [[<% tp.date.now("DD.MM.YYYY", -1) %>|Yesterday]] | [[<% tp.date.now("DD.MM.YYYY", 1) %>|Tomorrow]]
 
 #### Goals
-- [ ] Physical Activity
-- [ ] Meditate
-- [ ] Deep Work
+- [ ] 
 
 #### To Dos
 - [ ] 
 
-# Note
 
 ## Learning Journal
 
 
-### Notes created today
-
-```dataview
-List FROM "" WHERE file.cday = date("<%tp.date.now('YYYY-MM-DD')%>") SORT file.mtime asc
-```
-
-### Notes last touched today
-
-```dataview
-List FROM "" WHERE file.mday = date("<%tp.date.now('YYYY-MM-DD')%>") SORT file.mtime asc
-```
+### Pomodoro
